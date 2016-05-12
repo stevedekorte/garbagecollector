@@ -14,10 +14,10 @@ First you'll need to create a collector instance:
 Your values must contain the CollectorMarker struct as the first part of it's structure. So their struct declarations will look something like this:
 
     struct MyObjectType
-{
-	CollectorMarker marker;
-	...
-};
+    {
+    	CollectorMarker marker;
+    	...
+    };
     
 
 The collector manages the CollectorMarker and your code shouldn't touch it.
@@ -131,8 +131,8 @@ on each global.
 The collection parameters can be adjusted with these methods:
 
     Collector_setAllocsPerMark_(collector, apm);
-Collector_setMarksPerSweep_(collector, mps);
-Collector_setSweepsPerGeneration_(collector, spg);
+    Collector_setMarksPerSweep_(collector, mps);
+    Collector_setSweepsPerGeneration_(collector, spg);
     
 
 ## Cleaning Up
@@ -140,7 +140,7 @@ Collector_setSweepsPerGeneration_(collector, spg);
 To free all values beign monitored by the collector, call:
 
     
-Collector_freeAllValues(collector);
+    Collector_freeAllValues(collector);
     
 
 To free your collector instance, call:
@@ -150,4 +150,4 @@ To free your collector instance, call:
 
 ## Notes
 
-No attempt has been made to make this code safe for use when it's functions are called from multiple prememtive threads simultaniously.</td>
+No attempt has been made to make this code safe for use when it's functions are called from multiple prememtive threads simultaniously.
